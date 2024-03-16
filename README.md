@@ -18,7 +18,6 @@ Information about the restaurant
 
 ## Technologies Used ## 
 Tailwind CSS: 
-<br>
 A utility-first CSS framework for quickly building custom designs.
 <br>
 ScrollReveal.js: A JavaScript library for easy scroll animations.
