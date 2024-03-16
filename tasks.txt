@@ -1,0 +1,5 @@
+####### Tasks remaining to be completed #########
+
+1- make Responsive both web pages
+2- responsive navbar
+3- menu items horizontal scrolling

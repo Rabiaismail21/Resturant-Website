@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <script
+      src="https://kit.fontawesome.com/5d54fe3d28.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Nunito:wght@200;300&display=swap&family=Belanosima&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body class="w-full overflow-x-hidden">
+    <header
+      class="w-full h-full md:h-screen relative flex flex-col"
+      id="header"
+    >
+      <nav class="text-white py-4 md:px-4 relative z-10" id="navbar">
+        <!-- mobile nav menu -->
+        <div
+          class="container mx-auto flex justify-between items-center relative md:hidden"
+        >
+          <!-- Logo -->
+          <a href="#" class="text-lg font-headingText pl-4">Spice & Bite</a>
+
+          <!-- Navbar links -->
+          <ul
+            class="w-full h-0 overflow-hidden bg-lightGreen flex flex-col gap-4 absolute top-10 z-0 px-4 text-lg"
+            id="nav-items"
+          >
+            <li><a href="#" class="hover:text-gray-300">Home</a></li>
+            <li><a href="#" class="hover:text-gray-300">About</a></li>
+            <li><a href="#" class="hover:text-gray-300">Menu</a></li>
+            <li><a href="#" class="hover:text-gray-300">Gallery</a></li>
+            <li><a href="#" class="hover:text-gray-300">Reviews</a></li>
+            <li class="pb-2 bg-lightGreen rounded-full px-4 py-2">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+          <button class="block md:hidden pr-4" id="toggle-menu-btn">
+            <i class="fa-solid fa-bars" id="toggle-icons"></i>
+          </button>
+        </div>
+
+        <!-- desktop nav menu -->
+        <div class="w-full md:flex justify-between items-center hidden">
+          <!-- Logo -->
+          <a href="#" class="text-lg font-headingText pl-4">Spice & Bite</a>
+          <ul class="flex gap-4 text-lg items-center" id="nav-items">
+            <li>
+              <a
+                href="#home"
+                class="hover:underline hover:rounded-full decoration-lightGreen decoration-solid decoration-4 transition-all ease-linear duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../dist/about.html"
+                class="hover:underline hover:rounded-full decoration-lightGreen decoration-solid decoration-4 transition-all ease-linear duration-300"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#menu"
+                class="hover:underline hover:rounded-full decoration-lightGreen decoration-solid decoration-4 transition-all ease-linear duration-300"
+                >Menu</a
+              >
+            </li>
+            <li>
+              <a
+                href="#gallery"
+                class="hover:underline hover:rounded-full decoration-lightGreen decoration-solid decoration-4 transition-all ease-linear duration-300"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:rounded-full decoration-lightGreen decoration-solid decoration-4 transition-all ease-linear duration-300"
+                >Reviews</a
+              >
+            </li>
+            <li class="pb-2 bg-lightGreen rounded-full px-4 py-2">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+          <button class="block md:hidden pr-4" id="toggle-menu-btn">
+            <i class="fa-solid fa-bars" id="toggle-icons"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- hero section -->
+      <section class="py-4 md:py-0 relative z-0">
+        <div
+          class="w-full h-full md:w-3/5 mt-20 mx-auto flex flex-col items-center justify-center px-3 relative z-0"
+          id="hero-content">
+          <h1
+            class="text-2xl text-center text-white font-headingText md:text-6xl md:leading-normal relative z-0"
+            id="main-heading"
+          >
+            Taste The difference where flavours come alive and memories are made
+          </h1>
+          <p
+            class="text-white text-center mt-2 font-bodyText tracking-wider md:text-xl"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+            inventore libero veritatis quae nam, nisi facere ducimus similique
+            pariatur magni eaque necessitatibus aliquid accusamus dolorum!
+          </p>
+          <button
+            class="text-white bg-lightGreen px-6 py-2 rounded-full mt-6 text-lg"
+          >
+            Explore
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <!-- Menu Section -->
+    <section
+      id="menu"
+      class="w-screen h-70vh flex flex-col items-center pt-14"
+      id="menu-section"
+    >
+      <div class="w-full md:w-1/2 flex flex-col items-center">
+        <h2
+          class="text-2xl md:text-4xl font-headingText text-center"
+          id="menu-title"
+        >
+          Our Menu
+        </h2>
+        <hr class="w-28 my-4 h-1 bg-lightGreen border-none rounded">
+        <p class="text-center font-bodyText text-lg w-3/4 m-auto">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fuga
+          beatae saepe debitis tenetur laborum aut.
+        </p>
+      </div>
+      <!-- slider container-->
+      <div
+        class="w-3/5 h-full flex items-center mt-4 overflow-x-auto snap-x snap-mandatory" id="slider-container">
+        <!-- slider -->
+        <div class="h-full inline-flex items-center">
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="item w-full md:w-1/2 lg:w-[34%] h-52 snap-start">
+            <div class="w-full h-full grid grid-cols-2 items-center">
+              <!-- menu item image -->
+              <div class="">
+                <img
+                  src="../images/food-1-removebg-preview.png"
+                  alt=""
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <!-- menu item info -->
+              <div class="">
+                <h5 class="text-lg font-headingText font-bold">Thai food</h5>
+                <span class="block font-headingText">$11.00</span>
+                <button
+                  class="text-white bg-lightGreen px-3 py-2 rounded-full mt-3 -ml-2"
+                >
+                  Order now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- fast food Section -->
+    <section
+      class="w-screen h-full md:h-80vh flex flex-col lg:flex-row lg:justify-center my-28 lg:gap-10">
+      <!-- image left -->
+      <div
+        class="w-full grid place-items-center h-2/5 overflow-hidden lg:w-2/5 lg:2/5 lg:h-full"
+      >
+        <img
+          src="../images/pizza.jpg"
+          alt="image of pizza"
+          class="w-4/5 h-full object-cover rounded-lg lg:h-4/5"
+        />
+      </div>
+      <!-- info right -->
+      <div class="w-full flex flex-col items-start py-10 lg: lg:w-2/5 lg:pt-16">
+        <div class="title relative flex flex-col items-center lg:block">
+          <h2 class="text-2xl md:text-4xl font-headingText">Fast Foods</h2>
+          <hr class="w-28 my-4 h-1 bg-lightGreen border-none rounded">
+          <p
+            class="font-bodyText text-lg text-center px-8 md:pl-0 md:text-left"
+          >
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            deserunt molestiae laudantium, accusantium, accusamus maxime ipsam
+            expedita reprehenderit mollitia neque ab doloribus saepe illum in
+            consequatur? Laboriosam suscipit ipsum culpa magnam numquam corporis
+            ut dolores ex ea voluptatem molestiae quis perspiciatis enim
+            maiores, at dolor
+          </p>
+          <button
+            class="text-white bg-lightGreen px-6 py-2 rounded-full mt-6 text-lg"
+          >
+            Learn more
+          </button>
+          <div class="w-44 absolute right-3 -top-16 lg:right-12">
+            <img
+              class="w-full"
+              src="../images/new-tag.png"
+              loading="lazy"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- customer reviews section -->
+    <section class="w-screen h-full md:h-80vh">
+      <div class="w-4/5 m-auto flex flex-col items-center">
+        <h2 class="text-2xl md:text-4xl font-headingText">Happy Customers</h2>
+        <hr class="w-28 my-4 h-1 bg-lightGreen border-none rounded">
+        <p class="font-bodyText text-lg text-center">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed soluta
+          consequuntur officiis a qui itaque!
+        </p>
+      </div>
+      <!-- cards container-->
+      <div
+        class="w-4/5 flex flex-col justify-center items-center m-auto mt-10 gap-8 md:flex-row"
+      >
+        <!-- card -->
+        <!-- card one -->
+        <div
+          class="w-80 flex flex-col items-center bg-lightGreen pb-6 px-4 mt-10 relative rounded-2xl"
+        >
+          <div class="w-16 h-16 rounded-full absolute -top-8">
+            <img
+              src="../images/man-1.jpg"
+              alt=""
+              class="w-full rounded-full h-full object-cover"
+            />
+          </div>
+          <p class="text-center mt-12 text-white font-bodyText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            aperiam similique quas impedit molestiae quo eveniet sequi aliquam
+            dolor culpa
+          </p>
+          <h5 class="mt-3 font-bodyText font-bold">James David</h5>
+          <div class="text-xs text-yellow-300 mt-4">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+        </div>
+        <!-- card two -->
+        <div
+          class="w-80 flex flex-col items-center bg-lightGreen pb-6 px-4 mt-10 relative rounded-2xl"
+        >
+          <div class="w-16 h-16 rounded-full absolute -top-8">
+            <img
+              src="../images/man-2.jpg"
+              alt=""
+              class="w-full rounded-full h-full object-cover"
+            />
+          </div>
+          <p class="text-center mt-12 text-white font-bodyText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            aperiam similique quas impedit molestiae quo eveniet sequi aliquam
+            dolor culpa
+          </p>
+          <h5 class="mt-3 font-bodyText font-bold">Shaun Fed</h5>
+          <div class="text-xs text-yellow-300 mt-4">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+        </div>
+        <!-- card three -->
+        <div
+          class="w-80 flex flex-col items-center bg-lightGreen pb-6 px-4 mt-10 relative rounded-2xl"
+        >
+          <div class="w-16 h-16 rounded-full absolute -top-8">
+            <img
+              src="../images/girl.jpg"
+              alt=""
+              class="w-full rounded-full h-full object-cover"
+            />
+          </div>
+          <p class="text-center mt-12 text-white font-bodyText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            aperiam similique quas impedit molestiae quo eveniet sequi aliquam
+            dolor culpa
+          </p>
+          <h5 class="mt-3 font-bodyText font-bold">Anna Smith</h5>
+          <div class="text-xs text-yellow-300 mt-4">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- food gallery section -->
+    <section id="gallery" class="w-screen py-4 mt-16" id="photos-section">
+      <div class="w-4/5 m-auto flex flex-col items-center">
+        <h2 class="text-2xl md:text-4xl font-headingText">Food Gallery</h2>
+        <hr class="w-28 my-4 h-1 bg-lightGreen border-none rounded">
+        <p class="font-bodyText md:text-lg text-center md:w-3/4">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
+          laudantium corporis amet aliquam consectetur obcaecati enim velit
+          aliquid, distinctio nesciunt numquam. Architecto asperiores laboriosam
+          suscipit.
+        </p>
+      </div>
+      <!-- gallery container -->
+      <div class="md:w-3/5 w-4/5 m-auto mt-12 flex justify-center">
+        <div
+          class="h-70vh grid grid-cols-1 gap-y-4 md:gap-4 overflow-hidden md:grid-cols-3"
+          id="gallery"
+        >
+          <!-- image one -->
+          <div class="h-64 w-full">
+            <img
+              src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <!-- image two -->
+          <div class="h-64 md:col-span-2">
+            <img
+              src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <!-- image three -->
+          <div class="h-64 md:col-span-2">
+            <img
+              src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <!-- image four -->
+          <div class="h-64">
+            <img
+              src="https://images.unsplash.com/photo-1513185158878-8d8c2a2a3da3?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <!-- image five -->
+          <div class="h-64">
+            <img
+              src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=1788&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="w-full h-full object-cover"
+              loading=""
+            />
+          </div>
+
+          <!-- image six -->
+          <div class="h-64 md:col-span-2">
+            <img
+              src="https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <!-- image seven -->
+          <div class="h-64 md:col-span-2">
+            <img
+              src="https://images.unsplash.com/photo-1616299915952-04c803388e5f?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <!-- image eight -->
+          <div class="h-64">
+            <img
+              src="../images/hero-img.jpg"
+              alt=""
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        class="font-bodyText text-xl text-white font-bold mt-8 bg-lightGreen px-8 py-2 rounded-3xl m-auto block"
+        id="more-btn"
+      >
+        More
+      </button>
+    </section>
+
+    <!-- footer -->
+    <footer class="w-screen mt-8 pt-12 flex flex-col items-center" id="footer">
+      <div class="w-4/5">
+        <div class="w-full flex flex-col items-center text-white">
+          <h5 class="font-headingText font-bold text-lg">Spice & Bite</h5>
+          <ul
+            class="text-white text-lg md:flex items-center gap-6 cursor-pointer hidden font-bodyText mt-4"
+          >
+            <li>Home<a href="#home-section"></a></li>
+            <li>About<a href="#about-section"></a></li>
+            <li>Menu<a href="#menu-section"></a></li>
+            <li>Photos<a href="#photos-section"></a></li>
+            <li>Reviews<a href="#reviews-section"></a></li>
+            <li>Contact<a href="#contact-section"></a></li>
+          </ul>
+        </div>
+
+        <div
+          class="flex flex-col justify-center items-center mt-8 gap-8 md:flex-row"
+        >
+          <!-- Cell Number -->
+          <div class="flex items-center flex-col gap-4">
+            <i class="fa-solid fa-phone text-lightGreen"></i>
+            <span class="text-white">123-456-7890</span>
+          </div>
+
+          <!-- Address -->
+          <div class="flex items-center flex-col gap-4">
+            <i class="fa-solid fa-location-dot text-lightGreen"></i>
+            <span class="text-white">123 Main St, City, Country</span>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-center flex-col gap-4">
+            <i class="fa-solid fa-envelope text-lightGreen"></i>
+            <span class="text-white">example@example.com</span>
+          </div>
+        </div>
+
+        <!-- social media icons -->
+        <div class="flex justify-center mt-10 gap-4 md:gap-8">
+          <a
+            href="#"
+            class="bg-lightGreen py-2 text-white rounded-lg md:text-xl w-14 text-center"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a
+            href="#"
+            class="bg-lightGreen py-2 text-white rounded-lg md:text-xl w-14 text-center"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a
+            href="#"
+            class="bg-lightGreen py-2 text-white rounded-lg md:text-xl w-14 text-center"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <!-- copyright detail -->
+      <div
+        class="w-full h-24 bg-lightGreen text-white font-bodyText flex justify-center items-center mt-14 flex-col"
+      >
+        <p class="text-sm px-4 md:text-lg text-center">
+          copyright &copy;
+          <span class="copyright-year"></span>
+          - design and developed by
+          <a
+            href="https://github.com/Rabiaismail21"
+            class="font-bold"
+            target="_blank"
+            >Rabia Ismail</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./index.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Your custom CSS */
+@layer utilities {
+  /* For Firefox */
+  @-moz-document url-prefix() {
+    /* Hide scrollbar */
+    #slider-container::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for Firefox */
+    #slider-container:-webkit-scrollbar {
+      scrollbar-width: none;
+    }
+  }
+  @supports (-webkit-appearance:none) {
+      /* Hide scrollbar */
+      #slider-container {
+        overflow-y: auto; /* Optional: Re-enable scroll behavior */
+        scrollbar-width: none; /* Hide scrollbar for Chrome */
+      }
+      /* Optional: Hide scrollbar thumb */
+      #slider-container::-webkit-scrollbar {
+        display: none;
+      }
+    }
+}
+  
+#header{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.766), rgba(21, 128, 60, 0.648)),
+    url(../images/hero-img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.scroll-bar{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+.scroll-bar::-webkit-scrollbar {
+ display: none;
+}
+#footer {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.766), rgba(21, 128, 60, 0.648)),
+    url(https://images.unsplash.com/photo-1541557435984-1c79685a082b?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: bottom;
+}
+#about-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(21, 128, 61, 0.5)),
+   url(https://images.unsplash.com/photo-1541557435984-1c79685a082b?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.item {
+  flex: 0 0 auto;
+}
+
